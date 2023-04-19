@@ -1,0 +1,30 @@
+.Title {
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    padding: 2em;
+    margin-bottom: 4em;
+    background-color:darkgoldenrod;
+    color:darkred;
+  }
+body{
+  background-color:brown}
+
+  /* * {
+    padding: 0;
+    margin: 0;
+  }
+  
+  .card {
+    border: 1px grey solid;
+    margin: 0 18%;
+    margin-top: 5%;
+    background-color: rgb(199, 198, 198);
+  }
+  .card-header {
+    padding: 10px 0;
+    text-align: center;
+    background-color: goldenrod;
+  } */
