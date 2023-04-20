@@ -1,12 +1,13 @@
 import { useState, useEffect } from "react";
 import "./Login.css";
 
-
 function Login() {
-  const initialValues = {  Userid: "", Password: "" };
+  const initialValues = { userId: "", password: "" };
   const [values, setValues] = useState(initialValues);
   const [errors, setErrors] = useState({});
   const [isSubmit, setIsSubmit] = useState(false);
+  const [signInSuccess, setSignInSuccess] = useState(false);
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -19,109 +20,111 @@ function Login() {
     setIsSubmit(true);
   };
 
-
-  const resetForm=(e)=>{
-    // e.preventDefault();
-     setValues({Userid: "", Password: ""});
-     
-     
-    
-   
-   
-  }
-
+  const resetForm = (e) => {
+    e.preventDefault();
+    setValues(initialValues);
+    setErrors({});
+    setIsSubmit(false);
+    setSignInSuccess(false);
+  };
+  // fetch('/users')
+  // .then(response => response.json())
+  // .then(data => {
+  //   console.log(data);
+  // })
+  // .catch(error => {
+  //   console.error('Error fetching data:', error);
+  // });
   useEffect(() => {
-    console.log(errors);
     if (Object.keys(errors).length === 0 && isSubmit) {
-      console.log(values);
+      fetch("http://localhost:8080/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(values),
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          if (data.success) {
+            setSignInSuccess(true);
+          } else {
+            setSignInSuccess(false);
+            setErrors({ signInFailed: "Incorrect user ID or password" });
+          }
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+        });
     }
   }, [errors]);
 
-
   const validate = (values) => {
     const errors = {};
-    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
 
-   
-    if (!values.Userid) {
-      errors.Userid = "Userid is required!";
-    } else if (!regex.test(values.Userid)) {
-      errors.Userid = " Not a valid format!";
+    if (!values.userId) {
+      errors.userId = "User ID is required!";
+    } else if (!emailRegex.test(values.userId)) {
+      errors.userId = "Not a valid email format!";
     }
 
-
-    if (!values.Password) {
-      errors.Password = "Password is required!";
-    } else if (values.Password.length < 4) {
-      errors.Password = "Password must be more than 4 characters";
-    } else if (values.Password.length > 10) {
-      errors.Password = "Password cannot exceed more than 10 characters";
+    if (!values.password) {
+      errors.password = "Password is required!";
+    } else if (values.password.length < 4) {
+      errors.password = "Password must be at least 4 characters!";
+    } else if (values.password.length > 10) {
+      errors.password = "Password cannot exceed 10 characters!";
     }
+
     return errors;
   };
 
   return (
     <div className="container">
-      {/* {
-      Object.keys(errors).length === 0 && isSubmit ? 
-      (
-        <div className="ui message success">Signed in successfully</div>
-      ) : (
-        <pre>{JSON.stringify(values, undefined, 2)}</pre>
-      )
-      } */}
-
       <form onSubmit={handleSubmit}>
-        <center><h6 >Enter Credentials</h6></center>
-        <br></br>
+        <h6 style={{ textAlign: "center" }}>Enter Credentials</h6>
         <div className="ui divider"></div>
         <div className="ui form">
-          
-          
           <div className="field">
-            <center>
-            <label>Userid</label>
-            <br></br>
+            <label>User ID</label>
             <input
               type="text"
-              name="Userid"
-              placeholder="Userid"
-              value={values.Userid}
+              name="userId"
+              placeholder="User ID"
+              value={values.userId}
               onChange={handleChange}
             />
-            </center>
+            {errors.userId && <p style={{ color: "red" }}>{errors.userId}</p>}
           </div>
-          <center><p>{errors.Userid}</p></center>
-
 
           <div className="field">
-            <center>
             <label>Password</label>
-            <br></br>
             <input
               type="password"
-              name="Password"
+              name="password"
               placeholder="Password"
-              value={values.Password}
+              value={values.password}
               onChange={handleChange}
             />
-            </center>
+            {errors.password && (
+              <p style={{ color: "red" }}>{errors.password}</p>
+            )}
           </div>
-          <center><p>{errors.Password}</p></center>
-          
-         
-          <center>
-          {/* <input type="submit" value="Sign-In"></input> */}
-          <button className="btn btn-success">Sign-In</button>
-          
-         {/* <br></br>  */}
-          {/* <input type="button" value="Reset Form" onClick={() => resetForm()}/> */}
-          <button className="btn btn-success" value="Reset Form" onClick={() => resetForm()}>Reset </button>
-          
-          </center>
-          
+
+          <div className="field">
+            <button className="btn btn-success">Sign In</button>
+            <button
+              type="button"
+              className="btn btn-success"
+              onClick={resetForm}
+            >
+              Reset
+            </button>
+            {Object.keys(errors).length === 0 && isSubmit && (
+              <p style={{ color: "green" }}>Signed in successfully!</p>
+            )}
+          </div>
         </div>
-        
       </form>
     </div>
   );

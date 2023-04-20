@@ -1,30 +1,42 @@
-.Title {
-    box-sizing: border-box;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: baseline;
-    padding: 2em;
-    margin-bottom: 4em;
-    background-color:darkgoldenrod;
-    color:darkred;
-  }
-body{
-  background-color:brown}
+.Header {
+  background-color: #3f51b5;
+  color: white;
+  padding: 1rem;
+}
 
-  /* * {
-    padding: 0;
-    margin: 0;
-  }
-  
-  .card {
-    border: 1px grey solid;
-    margin: 0 18%;
-    margin-top: 5%;
-    background-color: rgb(199, 198, 198);
-  }
-  .card-header {
-    padding: 10px 0;
-    text-align: center;
-    background-color: goldenrod;
-  } */
+.Header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.Header__title {
+  font-size: 2rem;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.Header__nav ul {
+  display: flex;
+  list-style: none;
+}
+
+.Header__nav li {
+  margin-right: 1rem;
+}
+
+.Header__nav a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+.Header__nav a:hover {
+  color: #ffc107;
+}

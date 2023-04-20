@@ -1,30 +1,35 @@
-import React from 'react'
-import './Header.css'
+import React from "react";
+import "./Header.css";
+import { FaCog, FaHome, FaPhone, FaQuestion } from "react-icons/fa";
+import { MdLocalHotel } from "react-icons/md";
 
-function Title() {
-    return (
-        <div className='Title'>
-            <div>
-                <center>
-                    <h1>Smart Inventory Management System</h1>
-                </center>
-            </div>
-        </div>
-
-
-        // <div style="background: url(https://bootstrapious.com/i/snippets/sn-static-header/background.jpg)" class="jumbotron bg-cover text-white">
-        //     <div class="container py-5 text-center">
-        //         <h1 class="display-4 font-weight-bold">Bootstrap static header</h1>
-        //         <p class="font-italic mb-0">Using simple jumbotron-style component, create a nice Bootstrap 4 header with a background image.</p>
-        //         <p class="font-italic">Snippe by
-        //             <a href="https://bootstrapious.com" class="text-white">
-        //                 <u>Bootstrapious</u>
-        //             </a>
-        //         </p>
-        //         <a href="#" role="button" class="btn btn-primary px-5">See All Features</a>
-        //     </div>
-        // </div>
-    )
+function Header() {
+  return (
+    <header className="Header">
+      <div className="Header__container">
+        <h1 className="Header__title">Smart Inventory Management System</h1>
+        <nav className="Header__nav">
+          <ul>
+            <li>
+              <a href="#">
+                <FaCog />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <FaPhone />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <FaQuestion />
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+  );
 }
 
-export default Title
+export default Header;
