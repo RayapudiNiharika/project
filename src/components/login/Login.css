@@ -1,0 +1,96 @@
+/* Set background gradient */
+body {
+  background-image: url(C:\Users\gagan.pandey\Downloads\project-main\project-main\src\pxfuel.jpg);
+  background-size: cover;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow: hidden;
+}
+
+/* Center the form */
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  margin: auto;
+}
+
+/* Style the form */
+.container > form {
+  width: 400px;
+  border: 1px solid #ddd;
+  padding: 40px;
+  border-radius: 5px;
+  background: #fff;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0.85;
+}
+
+/* Style the form heading */
+.container > form > h2 {
+  margin: 0 0 20px;
+  font-size: 28px;
+  text-align: center;
+  color: #333;
+}
+
+/* Style form fields and labels */
+.container > form label {
+  display: block;
+  margin: 0 0 10px;
+  font-size: 16px;
+  color: #555;
+}
+
+.container > form input[type="text"],
+.container > form input[type="password"] {
+  width: 100%;
+  height: 45px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 16px;
+  color: #333;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.container > form input[type="text"]:focus,
+.container > form input[type="password"]:focus {
+  outline: none;
+  border-color: #0563b4;
+}
+
+/* Style error messages */
+.container > form span {
+  display: block;
+  margin: 5px 0 20px;
+  font-size: 14px;
+  color: red;
+}
+
+/* Style the buttons */
+.container > form button {
+  display: block;
+  width: 100%;
+  height: 45px;
+  border: none;
+  border-radius: 5px;
+  margin: 20px 0 0;
+  font-size: 18px;
+  color: #fff;
+  background-color: #0563b4;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.container > form button:hover {
+  background-color: #034a87;
+}
+
+.login-icon {
+  font-size: 4rem; /* Change the font size to make it bigger */
+  display: block; /* Change the display to block to center align */
+  margin: 0 auto; /* Center align the icon */
+}
