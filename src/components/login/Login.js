@@ -1,14 +1,16 @@
 import { useState, useEffect } from "react";
 import "./Login.css";
 import { BsPersonCircle } from "react-icons/bs";
+import { useNavigate } from "react-router-dom";
 
-function Login() {
+function Login({ handleLogin }) {
   const initialValues = { userId: "", password: "" };
   const [values, setValues] = useState(initialValues);
   const [errors, setErrors] = useState({});
   const [isSubmit, setIsSubmit] = useState(false);
   const [signInSuccess, setSignInSuccess] = useState(false);
   const userIdRegex = /^[a-zA-Z0-9]+$/;
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -17,8 +19,12 @@ function Login() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setErrors(validate(values));
-    setIsSubmit(true);
+    const validationErrors = validate(values);
+    setErrors(validationErrors);
+    if (Object.keys(validationErrors).length === 0) {
+      setIsSubmit(true);
+      handleLogin();
+    }
   };
 
   const resetForm = (e) => {
@@ -42,6 +48,8 @@ function Login() {
         .then((data) => {
           if (data.success) {
             setSignInSuccess(true);
+            // handleLogin();
+            navigate("/welcome");
           } else {
             setSignInSuccess(false);
             setErrors({ userId: "Incorrect User ID" });
@@ -89,10 +97,10 @@ function Login() {
               placeholder="User ID"
               value={values.userId}
               onChange={handleChange}
+              // required
             />
             {errors.userId && <p style={{ color: "red" }}>{errors.userId}</p>}
           </div>
-
           <div className="field">
             <label></label>
             <input
@@ -101,12 +109,12 @@ function Login() {
               placeholder="Password"
               value={values.password}
               onChange={handleChange}
+              // required
             />
             {errors.password && (
               <p style={{ color: "red" }}>{errors.password}</p>
             )}
           </div>
-
           <div className="field">
             <button className="btn btn-success">Sign In</button>
             <button

@@ -19,7 +19,8 @@ body {
 
 /* Style the form */
 .container > form {
-  width: 400px;
+  max-width: 400px;
+  width: 90%;
   border: 1px solid #ddd;
   padding: 40px;
   border-radius: 5px;
@@ -31,7 +32,7 @@ body {
 /* Style the form heading */
 .container > form > h2 {
   margin: 0 0 20px;
-  font-size: 28px;
+  font-size: 2.5rem;
   text-align: center;
   color: #333;
 }
@@ -40,18 +41,18 @@ body {
 .container > form label {
   display: block;
   margin: 0 0 10px;
-  font-size: 16px;
+  font-size: 1.5rem;
   color: #555;
 }
 
 .container > form input[type="text"],
 .container > form input[type="password"] {
   width: 100%;
-  height: 45px;
+  height: 4rem;
   border: 1px solid #ddd;
   border-radius: 5px;
-  padding: 10px;
-  font-size: 16px;
+  padding: 1rem;
+  font-size: 1.5rem;
   color: #333;
   transition: border-color 0.3s ease-in-out;
 }
@@ -66,7 +67,7 @@ body {
 .container > form span {
   display: block;
   margin: 5px 0 20px;
-  font-size: 14px;
+  font-size: 1rem;
   color: red;
 }
 
@@ -74,11 +75,11 @@ body {
 .container > form button {
   display: block;
   width: 100%;
-  height: 45px;
+  height: 4rem;
   border: none;
   border-radius: 5px;
   margin: 20px 0 0;
-  font-size: 18px;
+  font-size: 1.5rem;
   color: #fff;
   background-color: #0563b4;
   cursor: pointer;
@@ -90,7 +91,34 @@ body {
 }
 
 .login-icon {
-  font-size: 4rem; /* Change the font size to make it bigger */
+  font-size: 5rem; /* Change the font size to make it bigger */
   display: block; /* Change the display to block to center align */
   margin: 0 auto; /* Center align the icon */
+}
+
+/* Media queries for different screen sizes */
+@media screen and (max-width: 768px) {
+  /* Modify styles for screens smaller than 768px */
+  .container > form {
+    max-width: 80%;
+  }
+
+  .container > form > h2 {
+    font-size: 2rem;
+  }
+
+  .container > form label {
+    font-size: 1rem;
+  }
+
+  .container > form input[type="text"],
+  .container > form input[type="password"] {
+    height: 3rem;
+    font-size: 1rem;
+  }
+
+  .container > form button {
+    height: 3rem;
+    font-size: 1rem;
+  }
 }
