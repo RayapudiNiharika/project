@@ -1,6 +1,6 @@
 /* Set background gradient */
 body {
-  background-image: url(C:\Users\gagan.pandey\Downloads\project-main\project-main\src\pxfuel.jpg);
+  background-image: url(/src/pxfuel.jpg);
   background-size: cover;
   font-family: Arial, Helvetica, sans-serif;
   overflow: hidden;

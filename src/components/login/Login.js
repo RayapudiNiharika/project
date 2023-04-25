@@ -23,7 +23,8 @@ function Login({ handleLogin }) {
     setErrors(validationErrors);
     if (Object.keys(validationErrors).length === 0) {
       setIsSubmit(true);
-      handleLogin();
+      // handleLogin();
+      navigate("/Welcome");
     }
   };
 
@@ -35,31 +36,31 @@ function Login({ handleLogin }) {
     setSignInSuccess(false);
   };
 
-  useEffect(() => {
-    if (Object.keys(errors).length === 0 && isSubmit) {
-      fetch("http://localhost:8080/login", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(values),
-      })
-        .then((response) => response.json())
-        .then((data) => {
-          if (data.success) {
-            setSignInSuccess(true);
-            // handleLogin();
-            navigate("/welcome");
-          } else {
-            setSignInSuccess(false);
-            setErrors({ userId: "Incorrect User ID" });
-          }
-        })
-        .catch((error) => {
-          console.error("Error:", error);
-        });
-    }
-  }, [errors]);
+  // useEffect(() => {
+  //   if (Object.keys(errors).length === 0 && isSubmit) {
+  //     fetch("http://localhost:8080/login", {
+  //       method: "POST",
+  //       headers: {
+  //         "Content-Type": "application/json",
+  //       },
+  //       body: JSON.stringify(values),
+  //     })
+  //       .then((response) => response.json())
+  //       .then((data) => {
+  //         if (data.success) {
+  //           setSignInSuccess(true);
+  //           // handleLogin();
+  //           navigate("/welcome");
+  //         } else {
+  //           setSignInSuccess(false);
+  //           setErrors({ userId: "Incorrect User ID" });
+  //         }
+  //       })
+  //       .catch((error) => {
+  //         console.error("Error:", error);
+  //       });
+  //   }
+  // }, [errors]);
 
   const validate = (values) => {
     const errors = {};

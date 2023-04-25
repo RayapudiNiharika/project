@@ -24,15 +24,15 @@ function App() {
           <Route
             path="/"
             element={
-              loggedIn ? (
-                <Welcome handleLogout={handleLogout} />
-              ) : (
-                <>
-                  <Title />
-                  <Login handleLogin={handleLogin} />
-                </>
-              )
+              <div>
+                <Title />
+                <Login handleLogout={handleLogout} />
+              </div>
             }
+          />
+          <Route
+            path="/Welcome"
+            element={<Welcome handleLog={handleLogin} />}
           />
         </Routes>
       </div>
