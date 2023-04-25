@@ -27,6 +27,39 @@ function Login({ handleLogin }) {
       navigate("/Welcome");
     }
   };
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   const validationErrors = validate(values);
+  //   setErrors(validationErrors);
+  //   if (Object.keys(validationErrors).length === 0) {
+  //     setIsSubmit(true);
+  //     fetch("http://192.168.1.5:8085/employees", {
+  //       method: "POST",
+  //       headers: {
+  //         "Content-Type": "application/json",
+  //         "Access-Control-Allow-Origin": "*",
+  //       },
+  //       body: JSON.stringify({ userId: values.userId, password: values.password }),
+  //     })
+  //       .then((response) => response.json())
+  //       .then((result) => {
+  //         console.log(result);
+  //         if (result.success) {
+  //           setSignInSuccess(true);
+  //           handleLogin(); // call this function to set authenticated state in your app
+  //           navigate("/Welcome");
+  //         } else {
+  //           setSignInSuccess(false);
+  //           setErrors({ signIn: result.message });
+  //         }
+  //       })
+  //       .catch((error) => {
+  //         console.error(error);
+  //         setSignInSuccess(false);
+  //         setErrors({ signIn: "Error signing in. Please try again." });
+  //       });
+  //   }
+  // };
 
   const resetForm = (e) => {
     e.preventDefault();

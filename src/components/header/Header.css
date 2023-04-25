@@ -2,6 +2,7 @@
   background-color: #3f51b5;
   color: white;
   padding: 1rem;
+  box-shadow: 0px 0px 10px black;
 }
 
 .Header__container {
@@ -20,6 +21,7 @@
   justify-content: space-between;
   align-items: center;
   text-align: center;
+  text-shadow: 0px 0px 10px black;
 }
 
 .Header__nav ul {

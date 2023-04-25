@@ -1,8 +1,10 @@
 import logo from "./logo.svg";
 import "./App.css";
 import Login from "./components/login/Login";
+// import Testing from "./components/home/testing";
 import Welcome from "./components/home/Welcome";
 import { useState } from "react";
+import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Title from "./components/header/Header";
 
@@ -32,7 +34,7 @@ function App() {
           />
           <Route
             path="/Welcome"
-            element={<Welcome handleLog={handleLogin} />}
+            element={<Welcome handleLogin={handleLogin} />}
           />
         </Routes>
       </div>

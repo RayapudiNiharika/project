@@ -8,6 +8,7 @@
   transition: all 0.3s ease-in-out;
   z-index: 999;
   opacity: 0.8;
+  box-shadow: 0 0 10px black;
 }
 
 .sidebar.open {
@@ -27,13 +28,14 @@ li {
 
 a {
   text-decoration: none !important;
-  color: #333;
+  color: #4438c2;
   font-weight: bold;
   display: flex;
   justify-content: flex-start;
   gap: 15px;
   align-items: center;
   text-align: center;
+  text-shadow: 0 0 0.2px black;
 }
 
 a:hover {
@@ -42,7 +44,7 @@ a:hover {
 
 .sidebar-title {
   padding: 12px 0px;
-  font-size: 22px;
+  font-size: 25px;
   font-weight: bold;
   text-align: center;
   color: #000000;
@@ -70,7 +72,7 @@ a:hover {
   right: 20px;
   width: 40px;
   height: 40px;
-  background-color: #333;
+  background-color: #4438c2;
   border: none;
   border-radius: 50%;
   color: #fff;
@@ -79,6 +81,7 @@ a:hover {
   justify-content: center;
   align-items: center;
   z-index: 1000;
+  box-shadow: 0 0 10px black;
 }
 
 .toggle-btn:hover {
@@ -86,8 +89,18 @@ a:hover {
 }
 
 .godown-content {
-  margin-left: 200px;
+  margin-left: 210px;
   display: flex;
-  border: 1px solid black;
   height: max-content;
+  opacity: 0.9;
+}
+
+.card {
+  box-shadow: 0 0 15px black;
+}
+.text-center.text-white.my-3 {
+  text-shadow: 0 0 10px black;
+}
+.card :hover {
+  color: #4438c2;
 }
