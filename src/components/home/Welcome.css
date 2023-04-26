@@ -89,15 +89,20 @@ a:hover {
 }
 
 .godown-content {
-  margin-left: 210px;
+  margin-left: 0.4rem;
   display: flex;
   height: max-content;
+  justify-content: center;
+  align-items: center;
   opacity: 0.9;
 }
 
 .card {
   box-shadow: 0 0 15px black;
+  margin: 10px; /* adjust as needed */
+  padding: 10px; /* adjust as needed */
 }
+
 .text-center.text-white.my-3 {
   text-shadow: 0 0 10px black;
 }
