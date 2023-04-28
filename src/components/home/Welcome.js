@@ -54,7 +54,7 @@ const Welcome = () => {
             </a>
           </li>
           <li className="nav-item">
-            <a href="#">
+            <a href="/returns">
               <FontAwesomeIcon icon={faExchangeAlt} />
               <span> Returns</span>
             </a>

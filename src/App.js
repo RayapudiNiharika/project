@@ -14,6 +14,8 @@ import CreateInwards from "./components/pages/Inwards/CreateInwards";
 import Outwards from "./components/pages/Outwards/Outwards";
 import CreateOutwards from "./components/pages/Outwards/CreateOutwards";
 import Godown from "./components/pages/Godown/Godown";
+import CreateGodown from "./components/pages/Godown/CreateGodown";
+import Return from "./components/pages/Return/Return";
 
 function App() {
   const [loggedIn, setLoggedIn] = useState(false);
@@ -46,12 +48,14 @@ function App() {
 
 
           <Route path='/godown' element={<Godown />}></Route>
+          <Route path='/creategodown' element={<CreateGodown />}></Route>
           <Route path='/employees' element={<Employees />}></Route>
           <Route path='/createemployee' element={<CreateEmployee />}></Route>
           <Route path='/inwards' element={<Inwards />}></Route>
           <Route path='/createinwards' element={<CreateInwards />}></Route>
           <Route path='/outwards' element={<Outwards />}></Route>
           <Route path='/createoutwards' element={<CreateOutwards />}></Route>
+          <Route path='/returns' element={<Return />}></Route>
         </Routes>
       </div>
     </Router>

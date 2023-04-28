@@ -7,20 +7,17 @@
       "manager": "Jane Smith",
       "start_date": "2022-02-15",
       "id": 1
-    }
-  ],
-  "employees": [
+    },
     {
-      "employee_id": "E001",
-      "name": "John",
-      "username": "jo",
-      "email": "johndoe@example.com",
-      "password": "1234",
-      "phone": "5551234",
-      "godown_id": "G001",
-      "id": 1
+      "godown_id": "11",
+      "location": "hyd",
+      "capacity": "20",
+      "manager": "rapo",
+      "start_date": "",
+      "id": 2
     }
   ],
+  "employees": [],
   "inwards": [
     {
       "godown_id": "001",
@@ -51,5 +48,6 @@
       "checked_by": "",
       "id": 1
     }
-  ]
+  ],
+  "returns": []
 }
