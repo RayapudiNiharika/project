@@ -1,0 +1,27 @@
+{
+  "godown": [],
+  "employees": [
+    {
+      "employee_id": "E001",
+      "name": "niharika",
+      "username": "niha",
+      "email": "rniharika05@gmail.com",
+      "password": "1234",
+      "phone": "09704135683",
+      "godown_id": "G001",
+      "id": 1
+    },
+    {
+      "employee_id": "E002",
+      "name": "John",
+      "username": "jo",
+      "email": "johndoe@example.com",
+      "password": "123",
+      "phone": "5551234",
+      "godown_id": "G002",
+      "id": 2
+    }
+  ],
+  "inwards": [],
+  "outwards": []
+}
