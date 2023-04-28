@@ -30,27 +30,27 @@ const Welcome = () => {
         <div className="sidebar-title">Dashboard</div>
         <ul className="nav-list">
           <li className="nav-item">
-            <a href="#">
+            <a href="/godown">
               <FontAwesomeIcon icon={faWarehouse} />
               <span> Godowns</span>
             </a>
           </li>
           <li className="nav-item">
-            <a href="#">
+            <a href="/employees">
               <FontAwesomeIcon icon={faUsers} />
               <span> Employees</span>
             </a>
           </li>
           <li className="nav-item">
-            <a href="#">
+            <a href="/inwards">
               <FontAwesomeIcon icon={faBoxes} />
               <span> Inwards</span>
             </a>
           </li>
           <li className="nav-item">
-            <a href="#">
+            <a href="/outwards">
               <FontAwesomeIcon icon={faTruck} />
-              <span> Delivery</span>
+              <span> Outwards</span>
             </a>
           </li>
           <li className="nav-item">

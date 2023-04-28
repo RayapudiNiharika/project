@@ -1,0 +1,55 @@
+{
+  "godown": [
+    {
+      "godown_id": "G002",
+      "location": "PQR Street, LMN City",
+      "capacity": 10000,
+      "manager": "Jane Smith",
+      "start_date": "2022-02-15",
+      "id": 1
+    }
+  ],
+  "employees": [
+    {
+      "employee_id": "E001",
+      "name": "John",
+      "username": "jo",
+      "email": "johndoe@example.com",
+      "password": "1234",
+      "phone": "5551234",
+      "godown_id": "G001",
+      "id": 1
+    }
+  ],
+  "inwards": [
+    {
+      "godown_id": "001",
+      "supplier_name": "John",
+      "item_name": "bkb",
+      "date_of_supply": "",
+      "invoice_no": "jh",
+      "quantity": "5551234",
+      "received_by": "jack",
+      "receipt_no": "12",
+      "checked_by": "ddf",
+      "item_id": "",
+      "id": 1
+    }
+  ],
+  "outwards": [
+    {
+      "godown_id": "001",
+      "item_name": "hsh",
+      "invoice_no": "",
+      "date_of_supply": "",
+      "date_of_del": "",
+      "delivered_to": "",
+      "quantity": "1234",
+      "purpose": "khdf",
+      "receipt_no": "",
+      "bill_value": "",
+      "checked_by": "",
+      "id": 1
+    }
+  ]
+}
