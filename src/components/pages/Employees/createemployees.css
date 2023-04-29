@@ -1,0 +1,60 @@
+.create-employee-container {
+  height: 600px;
+  overflow-y: scroll;
+}
+
+.create-employee-form {
+  margin: 0 auto;
+  padding: 30px;
+  background-color: white;
+  opacity: 0.9;
+  max-width: 800px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.create-employee-form-title {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.create-employee-form-group {
+  margin-bottom: 20px;
+}
+
+.create-employee-form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+
+.create-employee-form-input {
+  padding: 10px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 16px;
+}
+.create-employee-form-submit,
+.create-employee-form-cancel {
+  display: inline-block;
+  width: 48%;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 3px;
+  cursor: pointer;
+  text-align: center;
+  font-weight: normal;
+}
+
+.create-employee-form-submit {
+  margin-right: 4%;
+}
+
+.create-employee-form-cancel:hover,
+.create-employee-form-submit:hover {
+  opacity: 0.8;
+}

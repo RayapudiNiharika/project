@@ -9,18 +9,7 @@
       "id": 1
     }
   ],
-  "employees": [
-    {
-      "employee_id": "E001",
-      "name": "John",
-      "username": "jo",
-      "email": "johndoe@example.com",
-      "password": "1234",
-      "phone": "5551234",
-      "godown_id": "G001",
-      "id": 1
-    }
-  ],
+  "employees": [],
   "inwards": [
     {
       "godown_id": "001",

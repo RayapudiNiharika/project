@@ -14,6 +14,7 @@ import CreateInwards from "./components/pages/Inwards/CreateInwards";
 import Outwards from "./components/pages/Outwards/Outwards";
 import CreateOutwards from "./components/pages/Outwards/CreateOutwards";
 import Godown from "./components/pages/Godown/Godown";
+import Returns from "./components/pages/Returns/Returns";
 
 function App() {
   const [loggedIn, setLoggedIn] = useState(false);
@@ -44,14 +45,14 @@ function App() {
             element={<Welcome handleLogin={handleLogin} />}
           />
 
-
-          <Route path='/godown' element={<Godown />}></Route>
-          <Route path='/employees' element={<Employees />}></Route>
-          <Route path='/createemployee' element={<CreateEmployee />}></Route>
-          <Route path='/inwards' element={<Inwards />}></Route>
-          <Route path='/createinwards' element={<CreateInwards />}></Route>
-          <Route path='/outwards' element={<Outwards />}></Route>
-          <Route path='/createoutwards' element={<CreateOutwards />}></Route>
+          <Route path="/godown" element={<Godown />}></Route>
+          <Route path="/employees" element={<Employees />}></Route>
+          <Route path="/createemployee" element={<CreateEmployee />}></Route>
+          <Route path="/inwards" element={<Inwards />}></Route>
+          <Route path="/createinwards" element={<CreateInwards />}></Route>
+          <Route path="/outwards" element={<Outwards />}></Route>
+          <Route path="/createoutwards" element={<CreateOutwards />}></Route>
+          <Route path="/returns" element={<Returns />}></Route>
         </Routes>
       </div>
     </Router>
