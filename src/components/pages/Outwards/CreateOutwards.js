@@ -161,7 +161,7 @@ function CreateOutwards()
 
                     <div className='form-group'>
                         <button className='btn btn-success' type="submit">Submit</button>
-                        <Link to="/createoutwards" className='btn btn-danger'>Back</Link>
+                        <Link to="/outwards" className='btn btn-danger'>Back</Link>
                     </div>
                         
                 </form>

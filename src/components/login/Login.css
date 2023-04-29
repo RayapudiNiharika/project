@@ -1,0 +1,124 @@
+/* Set background gradient */
+body {
+  background-image: url(/src/pxfuel.jpg);
+  background-size: cover;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow: hidden;
+}
+
+/* Center the form */
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  width: 80%;
+  margin: auto;
+}
+
+/* Style the form */
+.container > form {
+  max-width: 400px;
+  width: 90%;
+  border: 1px solid #ddd;
+  padding: 40px;
+  border-radius: 5px;
+  background: #fff;
+  box-shadow: 0px 5px 10px black;
+  opacity: 0.85;
+}
+
+/* Style the form heading */
+.container > form > h2 {
+  margin: 0 0 20px;
+  font-size: 2.5rem;
+  text-align: center;
+  color: #333;
+}
+
+/* Style form fields and labels */
+.container > form label {
+  display: block;
+  margin: 0 0 10px;
+  font-size: 1.5rem;
+  color: #555;
+}
+
+.container > form input[type="text"],
+.container > form input[type="password"] {
+  width: 100%;
+  height: 4rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 1rem;
+  font-size: 1.5rem;
+  color: #333;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.container > form input[type="text"]:focus,
+.container > form input[type="password"]:focus {
+  outline: none;
+  border-color: #0563b4;
+}
+
+/* Style error messages */
+.container > form span {
+  display: block;
+  margin: 5px 0 20px;
+  font-size: 1rem;
+  color: red;
+}
+
+/* Style the buttons */
+.container > form button {
+  display: block;
+  width: 100%;
+  height: 4rem;
+  border: none;
+  border-radius: 5px;
+  margin: 20px 0 0;
+  font-size: 1.5rem;
+  color: #fff;
+  background-color: #0563b4;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.container > form button:hover {
+  background-color: #034a87;
+}
+
+.login-icon {
+  font-size: 5rem; /* Change the font size to make it bigger */
+  display: block; /* Change the display to block to center align */
+  margin: 0 auto; /* Center align the icon */
+}
+
+/* Media queries for different screen sizes */
+@media screen and (max-width: 768px) {
+  /* Modify styles for screens smaller than 768px */
+  .container > form {
+    max-width: 80%;
+  }
+
+  .container > form > h2 {
+    font-size: 2rem;
+  }
+
+  .container > form label {
+    font-size: 1rem;
+  }
+
+  .container > form input[type="text"],
+  .container > form input[type="password"] {
+    height: 3rem;
+    font-size: 1rem;
+  }
+
+  .container > form button {
+    height: 3rem;
+    font-size: 1rem;
+  }
+}
