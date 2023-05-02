@@ -1,0 +1,10 @@
+.container{
+    /* d-flex vh-50 bg-none justify-content-center aligh-items-center overflow-y: scroll */
+    display: flex;
+    height: 600px;
+    background: none;
+    justify-content: center;
+    align-items: center;
+    overflow-y: scroll;
+    
+}

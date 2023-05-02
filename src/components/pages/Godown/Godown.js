@@ -18,18 +18,18 @@ function Godown() {
     fetch("http://localhost:9002/godown")
       .then((response) => response.json())
       .then((godown) => setGodown(godown));
-  }, []);
+  }, [godown]);
 
-  const handleDelete = (id) => {
-    const confirm = window.confirm("Do you like to delete?");
-    console.log(confirm);
-    if (confirm) {
-      axios.delete(`http://localhost:9002/godown/${id}`).then((res) => {
-        alert("Record Deleted");
-        Navigate("/Welcome");
-      });
-    }
-  };
+  // const handleDelete = (id) => {
+  //   const confirm = window.confirm("Do you like to delete?");
+  //   console.log(confirm);
+  //   if (confirm) {
+  //     axios.delete(`http://localhost:9002/godown/${id}`).then((res) => {
+  //       alert("Record Deleted");
+  //       Navigate("/Welcome");
+  //     });
+  //   }
+  // };
 
   return (
     <div>
@@ -60,7 +60,7 @@ function Godown() {
                   <td>{data.start_date}</td>
                   <td>
                     {/* <Link to={`/update/${data.employee_id}`} className='btn btn-primary'>Update</Link> */}
-                    <button className='btn btn-danger ms-2' onClick={handleDelete(data.id)}>Delete</button>
+                    {/* <button className='btn btn-danger ms-2' onClick={handleDelete(data.id)}>Delete</button> */}
                     {/* <button className="btn btn-danger" type="submit">
                       Delete
                     </button> */}

@@ -2,6 +2,8 @@ import axios from 'axios';
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+import "./createoutwards.css";
+
 
 
 function CreateOutwards()
@@ -73,8 +75,8 @@ function CreateOutwards()
     
     
     return (
-        <div className='d-flex vh-50 bg-none justify-content-center aligh-items-center'>
-            <div className='w-50 bg-white rounded p-3'>
+        <div className="container">
+            <div className='w-50 bg-white rounded p-3 my-10'>
                 <form onSubmit={handleSubmit}>
                     <h2>Add Outwards</h2>
                     <div className='mb-2'>

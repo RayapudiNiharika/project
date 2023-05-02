@@ -29,7 +29,7 @@ function Employees() {
       <Navbar />
       <div className="d-flex vh-100 bg-none justify-content-center aligh-items-center my-2 opacity-90 shadow-lg p-3 mb-5  rounded">
         <div className="w-70 bg-white rounded p-3">
-          <h3 className="p-3 mb-2 bg-secondary text-white">Employees Data</h3>
+          <h3 className="p-3 mb-2 bg-secondary text-white d-flex justify-content-center">Employees Data</h3>
           <Link to="/createemployee" className="btn btn-success">
             Add+
           </Link>
