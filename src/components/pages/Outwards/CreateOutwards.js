@@ -73,7 +73,7 @@ function CreateOutwards()
     
     
     return (
-        <div className='d-flex vh-50 bg-primary justify-content-center align-items-center'>
+        <div className='d-flex vh-50 bg-none justify-content-center aligh-items-center'>
             <div className='w-50 bg-white rounded p-3'>
                 <form onSubmit={handleSubmit}>
                     <h2>Add Outwards</h2>

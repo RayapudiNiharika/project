@@ -60,10 +60,10 @@ function Godown() {
                   <td>{data.start_date}</td>
                   <td>
                     {/* <Link to={`/update/${data.employee_id}`} className='btn btn-primary'>Update</Link> */}
-                    {/* <button className='btn btn-danger ms-2' onClick={handleDelete(data.employee_id)}>Delete</button> */}
-                    <button className="btn btn-danger" type="submit">
+                    <button className='btn btn-danger ms-2' onClick={handleDelete(data.id)}>Delete</button>
+                    {/* <button className="btn btn-danger" type="submit">
                       Delete
-                    </button>
+                    </button> */}
                   </td>
                 </tr>
               ))}

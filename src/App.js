@@ -14,6 +14,7 @@ import CreateInwards from "./components/pages/Inwards/CreateInwards";
 import Outwards from "./components/pages/Outwards/Outwards";
 import CreateOutwards from "./components/pages/Outwards/CreateOutwards";
 import Godown from "./components/pages/Godown/Godown";
+import CreateGodown from "./components/pages/Godown/CreateGodown";
 import Returns from "./components/pages/Returns/Returns";
 
 function App() {
@@ -46,6 +47,7 @@ function App() {
           />
 
           <Route path="/godown" element={<Godown />}></Route>
+          <Route path='/creategodown' element={<CreateGodown />}></Route>
           <Route path="/employees" element={<Employees />}></Route>
           <Route path="/createemployee" element={<CreateEmployee />}></Route>
           <Route path="/inwards" element={<Inwards />}></Route>

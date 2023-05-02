@@ -34,7 +34,7 @@ function Inwards() {
     <div>
       <Navbar />
 
-      <div className="d-flex vh-100 bg-none justify-content-center aligh-items-center my-5 opacity-90 shadow-lg p-3 mb-5  rounded">
+      <div className="d-flex vh-100 bg-none justify-content-center aligh-items-center my-2 opacity-90 shadow-lg p-3 mb-5  rounded">
         <div className="w-70 bg-white rounded p-3">
           <h3 className="p-3 mb-2 bg-secondary text-white">Inwards Data</h3>
           <Link to="/createinwards" className="btn btn-success">
@@ -77,7 +77,7 @@ function Inwards() {
                       Delete
                     </button>
                     {/* <button className='btn btn-primary'>Update</button>
-                                        <button className='btn btn-danger'>Delete</button> */}
+                    <button className='btn btn-danger'>Delete</button> */}
                   </td>
                 </tr>
               ))}

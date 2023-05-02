@@ -2,14 +2,25 @@
   "godown": [
     {
       "godown_id": "G002",
-      "location": "PQR Street, LMN City",
-      "capacity": 10000,
-      "manager": "Jane Smith",
-      "start_date": "2022-02-15",
+      "location": "Chennai",
+      "capacity": "20",
+      "manager": "Jack",
+      "start_date": "2023-05-10",
       "id": 1
     }
   ],
-  "employees": [],
+  "employees": [
+    {
+      "employee_id": "E001",
+      "name": "John",
+      "username": "Jo",
+      "email": "johndoe@example.com",
+      "password": "1234",
+      "phone": "5551234",
+      "godown_id": "G001",
+      "id": 1
+    }
+  ],
   "inwards": [
     {
       "godown_id": "001",
@@ -25,20 +36,6 @@
       "id": 1
     }
   ],
-  "outwards": [
-    {
-      "godown_id": "001",
-      "item_name": "hsh",
-      "invoice_no": "",
-      "date_of_supply": "",
-      "date_of_del": "",
-      "delivered_to": "",
-      "quantity": "1234",
-      "purpose": "khdf",
-      "receipt_no": "",
-      "bill_value": "",
-      "checked_by": "",
-      "id": 1
-    }
-  ]
+  "outwards": [],
+  "returns":[]
 }
