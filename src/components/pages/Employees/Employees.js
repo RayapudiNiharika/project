@@ -27,9 +27,9 @@ function Employees() {
   return (
     <div>
       <Navbar />
-      <div className="d-flex vh-100 bg-none justify-content-center aligh-items-center my-2 opacity-90 shadow-lg p-3 mb-5  rounded">
+      <div className="container-fluid vh-100 bg-none justify-content-center align-items-center my-5 opacity-90 shadow-lg p-3 mb-5 rounded">
         <div className="w-70 bg-white rounded p-3">
-          <h3 className="p-3 mb-2 bg-secondary text-white d-flex justify-content-center">Employees Data</h3>
+          <h3 className="p-3 mb-2 bg-secondary text-white">Employees Data</h3>
           <Link to="/createemployee" className="btn btn-success">
             Add+
           </Link>
@@ -57,9 +57,9 @@ function Employees() {
                   <td>{data.phone}</td>
                   <td>{data.godown_id}</td>
                   <td>
-                    {/* <Link to={`/update/${data.id}`} className="btn btn-primary">
+                    <Link to={`/update/${data.id}`} className="btn btn-primary">
                       Update
-                    </Link> */}
+                    </Link>
                     <button
                       className="btn btn-danger ms-2"
                       onClick={() => handleDelete(data.id)}
