@@ -6,13 +6,6 @@ import Navbar from "../../home/navbar";
 function Outwards() {
   const [outwards, setOutwards] = useState([]);
 
-  // useEffect(()=>
-  // {
-  //     axios.get('http://localhost:9002/outwards')
-  //     .then(res=>setOutwards(res.data))
-  //     .then(err=>console.log(err))
-  // }, [])
-
   useEffect(() => {
     fetch("http://localhost:9002/outwards")
       .then((response) => response.json())
